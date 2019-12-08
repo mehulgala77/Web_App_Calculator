@@ -1,0 +1,204 @@
+
+/* Root tags */
+
+:root {
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  height: 100vh;
+  background-image: linear-gradient(to top, #007adf 0%, #00ecbc 100%);
+}
+
+.calculator-container {
+  height: 100%;
+
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Top calculator styles */
+
+.calculator {
+  width: 45vmin;
+  height: 60vmin;
+  min-height: 60vmin;
+}
+
+.calculator > * {
+  width: 100%;
+}
+
+/* Two main sections of the calculator */
+.display {
+  background-color: black;
+  height: 20%;
+}
+
+.display > * {
+  color: white;
+  direction: rtl;
+  width: 100%;
+
+  padding-right: 0.8rem;
+}
+
+.pastCalc {
+  color: grey;
+  height: 40%;
+
+  display: flex;
+  align-items: flex-end;
+
+  font-size: 1.2rem;
+}
+
+.currentCalc {
+  height: 60%;
+
+  display: flex;
+  align-items: center;
+
+  font-size: 2rem;
+}
+
+/* Controls section */
+
+.controls {
+  height: 80%;
+  background-color: PowderBlue;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+    "all-clear all-clear delete divide"
+    "one two three multiply"
+    "four five six add"
+    "seven eight nine subtract"
+    "decimal-point zero equal equal"
+}
+
+.controls > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 2rem;
+  font-weight: 900;
+
+  cursor: pointer;
+  user-select: none;
+
+  border: 2px solid white;
+}
+
+.controls > *:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.controls > *:active {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Inidividual controls */
+.all-clear {
+  grid-area: all-clear;
+  border-top: none;
+  border-left: none;
+}
+
+.delete {
+  grid-area: delete;
+  border-top: none;
+}
+
+.one {
+  grid-area: one;
+  border-left: none;
+}
+
+.two {
+  grid-area: two;
+}
+
+.three {
+  grid-area: three;
+}
+
+.four {
+  grid-area: four;
+  border-left: none;
+}
+
+.five {
+  grid-area: five;
+}
+
+.six {
+  grid-area: six;
+}
+
+.seven {
+  grid-area: seven;
+  border-left: none;
+}
+
+.eight {
+  grid-area: eight;
+}
+
+.nine {
+  grid-area: nine;
+}
+
+.zero {
+  grid-area: zero;
+  border-bottom: none;
+}
+
+.add {
+  grid-area: add;
+  border-right: none;
+}
+
+.subtract {
+  grid-area: subtract;
+  border-right: none;
+}
+
+.multiply {
+  grid-area: multiply;
+  border-right: none;
+}
+
+.divide {
+  grid-area: divide;
+  border-right: none;
+  border-top: none;
+}
+
+.decimal-point {
+  grid-area: decimal-point;
+  border-left: none;
+  border-bottom: none;
+}
+
+.equal {
+  grid-area: equal;
+  border-bottom: none;
+  border-right: none;
+}
