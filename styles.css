@@ -16,69 +16,59 @@ body {
   margin: 0;
   padding: 0;
 
-  height: 100vh;
   background-image: linear-gradient(to top, #007adf 0%, #00ecbc 100%);
 }
 
-.calculator-container {
-  height: 100%;
-
-  margin: 0 auto;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 /* Top calculator styles */
 
 .calculator {
-  width: 45vmin;
-  height: 60vmin;
-  min-height: 60vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  min-height: 100vh;
 }
 
 .calculator > * {
-  width: 100%;
+  width: 45vmin;
 }
 
 /* Two main sections of the calculator */
 .display {
+  min-height: 12vmin;
   background-color: black;
-  height: 20%;
-}
-
-.display > * {
   color: white;
-  direction: rtl;
-  width: 100%;
 
-  padding-right: 0.8rem;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+
+  /* VImp: To break long words in a div */
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 .pastCalc {
-  color: grey;
-  height: 40%;
-
-  display: flex;
-  align-items: flex-end;
-
   font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .currentCalc {
-  height: 60%;
-
-  display: flex;
-  align-items: center;
-
   font-size: 2rem;
 }
 
 /* Controls section */
 
 .controls {
-  height: 80%;
+  height: 50vmin;
+  min-height: 50vmin;
+
   background-color: PowderBlue;
 
   display: grid;
